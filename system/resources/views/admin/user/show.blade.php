@@ -16,7 +16,7 @@
 						Email : {{$user->email}} 
 					</p>
 					<p>
-						No Handphone : {{$user->detail->no_handphone}} 
+						No Handphone : {{$user->detail->no_handphone}}
 					</p>
 				</div>
 			</div>
