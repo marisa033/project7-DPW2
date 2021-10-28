@@ -48,6 +48,11 @@ class UserController extends Controller {
 		if(request('password')) $user->password = bcrypt(request('password'));
 		$user->save();
 
+		$userDetail = new UserDetail;
+		$userDetail->id_user = $user->id;
+		$userDetail->no_handphone = request('no_handphone');
+		$userDetail->save();
+
 		return redirect('admin/user')->with('success', 'Data Berhasil Diedit');
 
 	}
